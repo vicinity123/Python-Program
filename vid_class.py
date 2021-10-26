@@ -9,23 +9,25 @@ class Video:
             part="contentDetails, snippet, statistics",
             id=self.ids
         )
-        global vid_resp, vid_items
+        global vid_resp
         vid_resp = vid_req.execute()
-        vid_items = vid_resp["items"][0]
+
+    def get_entire_response(self):
+        return vid_resp
 
     def get_video_id(self):
         return self.ids
 
     def get_channel_id(self):
-        return vid_items["snippet"]["channelId"]
+        return vid_resp["items"][0]["snippet"]["channelId"]
 
     def get_likes(self):
-        return vid_items["statistics"]["likeCount"]
+        return vid_resp["items"][0]["statistics"]["likeCount"]
 
     def get_duration(self):
         pass
 
 vid1 = Video("19E9RQC5kDo")
 
-output = vid1.get_likes()
+output = vid1.get_entire_response()
 print(output)
