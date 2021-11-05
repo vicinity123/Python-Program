@@ -8,6 +8,7 @@ def sign_up(email, password):
     to_website("https://clockify.me")
     sleep(3)
     sign_btn = find_el("xpath", '//*[@id="hero"]/div[1]/a[1]/button')
+    sign_btn.click()
     sleep(3)
     sign_email = find_el(
         "xpath",
@@ -36,10 +37,10 @@ def log_in(email, password):
         "/html/body/app-root/register-layout/div/div/div/div/div[2]/login/div/form/div/div/div/div[2]/div[5]/button",
     )
     log_email.send_keys(email)
-    log_email.send_keys(password)
+    log_password.send_keys(password)
     log_submit.click()
 
 
 email_to_use = "randomemail@somedomain.com"
 password_to_use = "SomeDomain@randomEmail13"
-sign_up(email_to_use, password_to_use)
+log_in(email_to_use, password_to_use)
