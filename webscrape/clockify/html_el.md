@@ -1,0 +1,39 @@
+## Steps to sign in to clockify
+
+1. Go to (https://clockify.me)
+
+2. Wait for a few seconds to allow the page to load
+
+3. Click on the large sign in button
+   -> XPath: //\*[@id="hero"]/div[1]/a[1]/button
+
+4. Wait for a few seconds to allow the page to load
+
+5. Input email on the email input
+   -> XPath: /html/body/app-root/register-layout/div/div/div/div/div[2]/signup/div/form/div/div/div/div[2]/div[1]/input
+
+6. Input password on the password input
+   -> XPath: /html/body/app-root/register-layout/div/div/div/div/div[2]/signup/div/form/div/div/div/div[2]/div[2]/input
+
+7. Click the submit button
+   -> XPath: /html/body/app-root/register-layout/div/div/div/div/div[2]/signup/div/form/div/div/div/div[2]/div[4]/button
+
+## Steps to login to a clockify account
+
+1. Go to (https://clockify.me/login)
+
+2. Wait for a few seconds to allow the page to load
+
+3. Input email on the email input
+   -> XPath: //\*[@id="email"]
+
+4. Input password on the password input
+   -> XPath: //\*[@id="password"]
+
+5. Click on the login button
+   -> XPath: /html/body/app-root/register-layout/div/div/div/div/div[2]/login/div/form/div/div/div/div[2]/div[5]/button
+
+### For sign_up - step 3 and login - step 3 & 4
+
+- The xpath's asterisk character will be escaped using backslash symbol
+- The correct xpath is without the backslash character behind asterisk character
