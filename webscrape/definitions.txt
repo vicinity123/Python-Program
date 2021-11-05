@@ -1,0 +1,24 @@
+# Steps for getting defintions or synonyms
+
+1. Ask user to choose between dictionary or synonym
+
+2. Ask user to input word
+    -> Format the word to account for spaces
+        -> Replace whitespaces by either "+" or "%20"
+
+=> Link format: 
+    -> Dictionary: https://dictionary.com/browse/{word}
+    -> Synonym: https://thesaurus.com/browse/{word}
+
+=> Element attributes: (<tag>, class="")
+    -> Dictionary: ("div", "e1fc5zsj0")
+        <div class="e1fc5zsj0"></div>
+
+    -> Synonym: ("div", "e15rdun50")
+        <div class="e15rdun50"></div>
+
+3. Print the result in the terminal
+
+
+## Ways to improve
+-> Being able to find the element regardless of the element's class changing
