@@ -55,8 +55,15 @@ while True:
     if user_file_or_not not in ["Y", "N"]:
         continue
     elif user_file_or_not == "Y":
-        user_filename = input(f"What would you like the filename to be? ")
-        with open(f"{user_filename}.txt", "w") as file:
+        user_filename = input(f"What would you like the filename to be? ").lower()
+        user_extname = input(f"(T) for the text file or (M) for markdown? ").lower()
+        if user_extname not in ["t", "m"]:
+            continue
+        elif user_extname == "t":
+            user_extname = "txt"
+        else:
+            user_extname = "md"
+        with open(f"./{user_filename}.{user_extname}", "w") as file:
             file.write(write_content)
             break
     else:
