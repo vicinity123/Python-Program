@@ -1,0 +1,13 @@
+# Steps for the hangman game
+
+- Get the user input
+
+- Run a conditional that checks the following:
+    -> If user guess is correct: write the letter in the correct position
+    -> If user guess is incorrect: tell the user the guess is incorrect.
+
+- In either case: remove the guessed letter from the options list
+
+- After each guess, list the entire option list
+
+- Run the above until the entire word is guessed correctly
