@@ -1,6 +1,6 @@
 # Imports
 from bs4 import BeautifulSoup
-import requests
+from requests import get
 
 # Instruction
 print(
@@ -31,7 +31,7 @@ word = "%20".join(user_word.split(" "))
 url = f"https://{website}.com/browse/{word}"
 
 # Parse website
-get_website = requests.get(url).text
+get_website = get(url).text
 content = BeautifulSoup(get_website, "html.parser")
 
 # Content to display
