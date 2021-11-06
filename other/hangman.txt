@@ -1,13 +1,10 @@
-# Steps for the hangman game
+# Things the game will/should do
 
-- Get the user input
+- Inform the user how many letters the word is
 
-- Run a conditional that checks the following:
-    -> If user guess is correct: write the letter in the correct position
-    -> If user guess is incorrect: tell the user the guess is incorrect.
+- Get user input
 
-- In either case: remove the guessed letter from the options list
+- When user input is correct, place the letter in the right position
 
-- After each guess, list the entire option list
-
-- Run the above until the entire word is guessed correctly
+- Inform the user how many attempts they have got left
+    -> User get 6 attempts at the beginning of the game
