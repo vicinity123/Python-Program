@@ -12,3 +12,15 @@ def word_state(letter, word, array):
         return True
     else:
         return False
+
+
+def check_for(item, array):
+    result = []
+    for index, element in enumerate(array):
+        if element == item:
+            result.append([index, element])
+
+    if len(result) == 0:
+        return True
+    else:
+        return False

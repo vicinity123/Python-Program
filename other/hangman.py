@@ -1,6 +1,6 @@
 # Imports
 from words_list import words
-from word_state import word_state
+from word_state import word_state, check_for
 import random
 import string
 
@@ -31,7 +31,7 @@ for i in enumerate(word):
     word_guess.append("-")
 
 # Print start state
-# print(word)
+print(word)
 print("".join(word_guess))
 
 
@@ -57,17 +57,26 @@ def hangman():
         print(word)
         quit()
 
+    guess_left = check_for("-", word_guess)
+
+    if (attempts_left > 0) and (guess_left):
+        print("\n\nYou have found the word. Great job!")
+        quit()
+
 
 # Game loop
 while True:
     # Continuous user input
     user_input = input("\nGuess: ").lower()
-    input_list.append(user_input)
-    print(f"Used letters: {', '.join(set(input_list))}")
 
     # Quiting game if user input equals (qq)
     if user_input == "qq":
         quit()
+    elif len(user_input) > 1:
+        print("Please input a single character.")
+        continue
     # If user input is valid, run game logic
     elif user_input in alphabet:
+        input_list.append(user_input)
+        print(f"Used letters: {', '.join(set(input_list))}")
         hangman()
