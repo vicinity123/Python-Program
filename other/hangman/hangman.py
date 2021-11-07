@@ -31,7 +31,7 @@ for i in enumerate(word):
     word_guess.append("-")
 
 # Print start state
-print(word)
+# print(word)
 print("".join(word_guess))
 
 
