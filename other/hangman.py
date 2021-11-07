@@ -23,7 +23,7 @@ input_list = []
 
 # Instructions
 print(
-    f"\nWelcome the game of hangman. Each time this script is run, a new word will be generated for you to guess.\nThis script is case insensitive. Type (qq) to exit the script.\nFor this script the word you are looking for a word that contains {len(word)} letters."
+    f"\nWelcome to the game of hangman. Each time this script is run, a new word will be generated for you to guess.\nThis script is case insensitive. Type (qq) to exit the script.\nFor this script the word you are looking for a word that contains {len(word)} letters."
 )
 
 # Initial state of the word - filled with hyphens
@@ -31,7 +31,7 @@ for i in enumerate(word):
     word_guess.append("-")
 
 # Print start state
-print(word)
+# print(word)
 print("".join(word_guess))
 
 
@@ -54,6 +54,7 @@ def hangman():
     # Ending the game once attempt equals 0
     if attempts_left == 0:
         print("End of game")
+        print(word)
         quit()
 
 
